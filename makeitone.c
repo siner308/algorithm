@@ -9,7 +9,7 @@ int main(void){
     int cntBase = 0;
     
     scanf("%d", &inputnum);
-    printf("%d", makeOne(inputnum, cntBase));
+    printf("%d", makeitone(inputnum, cntBase));
     
     return 0;
 }
