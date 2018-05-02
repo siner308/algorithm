@@ -24,4 +24,3 @@ cntBase = 0
 inputnum = input()   
 INT_MAX = 99999999
 print(makeOne(inputnum, cntBase))
-
