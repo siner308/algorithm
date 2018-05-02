@@ -5,16 +5,16 @@
 int makeOne(int, int);
 
 int main(void){
-    int input = 0;
-    int cnt = 0;
+    int inputnum = 0;
+    int cntBase = 0;
     
-    scanf("%d", &input);
-    printf("%d", makeOne(input, cnt));
+    scanf("%d", &inputnum);
+    printf("%d", makeOne(inputnum, cntBase));
     
     return 0;
 }
 
-int makeOne(int input, int cntBase){
+int makeOne(int inputnum, int cntBase){
     int cnt[5];
     int minCnt = INT_MAX;
     int i = 0;
@@ -23,42 +23,13 @@ int makeOne(int input, int cntBase){
     	cnt[i] = cntBase;
 	}
 
-	    if(input > 1){
-	        if(input % 3 == 0){
-	            cnt[0] = makeOne(input/3, cnt[0] + 1);
-	        }
-	        else{
-	        	cnt[0] = INT_MAX;
-			}
-	
-	        if(input % 2 == 0){
-	            cnt[1] = makeOne(input/2, cnt[1] + 1);
-	        }      
-	        else{
-	        	cnt[1] = INT_MAX;
-			}
-	        
-	        if((input - 1) % 3 == 0){
-	            cnt[2] = makeOne((input - 1)/3, cnt[2] + 2);
-	        }
-	        else{
-	        	cnt[2] = INT_MAX;
-			}
-			
-			if((input - 2) % 3 == 0){
-				cnt[3] = makeOne((input - 2)/3, cnt[3] + 3);
-			}
-			else{
-				cnt[3] = INT_MAX;
-			}
-			
-			if((input - 1) % 2 == 0){
-				cnt[4] = makeOne((input - 1)/2, cnt[4] + 2);
-			}
-			else{
-				cnt[4] = INT_MAX;
-			}
-	    }
+    if(inputnum > 1){
+		cnt[0] = ((inputnum % 3 == 0) ? (makeOne(inputnum/3, cnt[0] + 1)) : INT_MAX);
+        cnt[1] = ((inputnum % 2 == 0) ? (makeOne(inputnum/2, cnt[1] + 1)) : INT_MAX);
+        cnt[2] = (((inputnum - 1) % 3 == 0) ? (makeOne((inputnum - 1)/3, cnt[2] + 2)) : INT_MAX);
+        cnt[3] = (((inputnum - 2) % 3 == 0) ? (makeOne((inputnum - 2)/3, cnt[3] + 3)) : INT_MAX);
+        cnt[4] = (((inputnum - 1) % 2 == 0) ? (makeOne((inputnum - 1)/2, cnt[4] + 2)) : INT_MAX);
+    }
 	    
     if(cnt[0] < minCnt){
         minCnt = cnt[0];
