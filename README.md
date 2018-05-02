@@ -2,4 +2,4 @@
 
     # dynamic programming
     
-        makeitone(python, c)
+        1. makeitone(python, c)
