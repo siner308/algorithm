@@ -2,6 +2,4 @@
 
     # dynamic programming
     
-        makeitone.py
-
-        makeitone.c
+        makeitone(python, c)
