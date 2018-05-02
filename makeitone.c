@@ -21,10 +21,10 @@ int makeOne(int inputnum, int cntBase){
     
     for (i = 0; i < 5; i++){
     	cnt[i] = cntBase;
-	}
+    }
 
     if(inputnum > 1){
-		cnt[0] = ((inputnum % 3 == 0) ? (makeOne(inputnum/3, cnt[0] + 1)) : INT_MAX);
+	cnt[0] = ((inputnum % 3 == 0) ? (makeOne(inputnum/3, cnt[0] + 1)) : INT_MAX);
         cnt[1] = ((inputnum % 2 == 0) ? (makeOne(inputnum/2, cnt[1] + 1)) : INT_MAX);
         cnt[2] = (((inputnum - 1) % 3 == 0) ? (makeOne((inputnum - 1)/3, cnt[2] + 2)) : INT_MAX);
         cnt[3] = (((inputnum - 2) % 3 == 0) ? (makeOne((inputnum - 2)/3, cnt[3] + 3)) : INT_MAX);
@@ -41,11 +41,11 @@ int makeOne(int inputnum, int cntBase){
         minCnt = cnt[2];
     }
     if(cnt[3] < minCnt){
-    	minCnt = cnt[3];
-	}
-	if(cnt[4] < minCnt){
-		minCnt = cnt[4];
-	}
+	minCnt = cnt[3];
+    }
+    if(cnt[4] < minCnt){
+	minCnt = cnt[4];
+    }
 	
     return minCnt;
 }
