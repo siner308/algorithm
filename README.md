@@ -1,6 +1,6 @@
 # make-it-one
 
     # dynamic programming
-              makeitone.py
+        makeitone.py
 
-              makeitone.c
+        makeitone.c
