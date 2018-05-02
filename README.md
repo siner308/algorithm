@@ -1,3 +1,5 @@
 # make-it-one
-  makeOne.py
-  makeOne.c
+
+  makeitone.py
+  
+  makeitone.c
