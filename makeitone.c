@@ -14,7 +14,7 @@ int main(void){
     return 0;
 }
 
-int makeitone(int inputnum, int cntBase){
+int makeOne(int inputnum, int cntBase){
     int cnt[5];
     int minCnt = INT_MAX;
     int i = 0;
